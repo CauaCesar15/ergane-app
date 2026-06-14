@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   degrade: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: 'rgba(5, 50, 37, 0.75)',
   },
   tudo: {
