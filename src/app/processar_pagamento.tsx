@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, TextInput, Text, TouchableOpacity, Image } from 'react-native';
 
 // O componente agora inicia direto no status 'processando'
-export default function App({ navigation }) {
+export default function App({ }) {
   const [statusVenda, setStatusVenda] = useState('processando');
   const [text, setText] = useState('');
 
   useEffect(() => {
-    let timerId;
+    let timerId: number | null | undefined;
 
     if (statusVenda === 'processando') {
       timerId = setTimeout(() => {
@@ -21,7 +21,7 @@ export default function App({ navigation }) {
   }, [statusVenda]);
 
   useEffect(() => {
-    let timerHome;
+    let timerHome: number | null | undefined;
     if (statusVenda === 'concluida') {
       timerHome = setTimeout(() => {
        
